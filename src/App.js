@@ -1,9 +1,22 @@
+import React ,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Just from "./component/just";
 
-function App() {
+class App extends Component {
+
+  state={
+    myName:"Ajith",
+    myage:19,
+  }
+
+  render(){
   return (
     <div className="App">
+      <div>
+        <h1>im ad</h1>
+        <Just myName={this.state.myName}/>
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +33,7 @@ function App() {
       </header>
     </div>
   );
+  }
 }
 
 export default App;
